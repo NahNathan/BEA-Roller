@@ -1,1 +1,4 @@
-<div>Dado aqui</div>
+<div class="dado" [ngClass]="{'rolando': rolando}" (animationend)="pararAnimacao()">
+    {{ valor }}
+  </div>
+  

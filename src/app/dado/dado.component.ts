@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dado',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dado.component.css']
 })
 export class DadoComponent {
+  @Input() valor: number = 1;
+  @Input() rolando: boolean = false; // Recebe o estado de rolagem do componente pai
 
+  // Função chamada ao fim da animação
+  pararAnimacao() {
+    this.rolando = false;
+  }
 }
