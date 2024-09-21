@@ -19,15 +19,29 @@ export class AppComponent {
   rolandoDados = false;
 
   // Array com os nomes dos arquivos de imagem
-  private backgroundImageUrls = ['BG1.png', 'BG2.png', 'BG3.png', 'BG4.png', 'BG5.png', 'BG6.png'];
-  
+  private backgroundImageUrls = [
+    'assets/images/BG1.png', 
+    'assets/images/BG2.png', 
+    'assets/images/BG3.png', 
+    'assets/images/BG4.png', 
+    'assets/images/BG5.png', 
+    'assets/images/BG6.png'
+  ];
+
+  // Armazenar a URL da imagem de background aleatória
+  backgroundImage: string;
+
+  constructor(private roladaService: RoladaService) {
+    // Inicializar com uma imagem aleatória quando o componente for carregado
+    this.backgroundImage = this.getAleatorioBackgroundImage();
+  }
+
   // Função para obter a URL da imagem aleatória
   getAleatorioBackgroundImage(): string {
     return `url(${this.backgroundImageUrls[Math.floor(Math.random() * this.backgroundImageUrls.length)]})`;
   }
 
-  constructor(private roladaService: RoladaService) {}
-
+  // Função chamada ao clicar para rolar os dados
   onRoll() {
     this.rolandoDados = true; // Ativa a animação de rolagem
     setTimeout(() => {
@@ -49,4 +63,7 @@ export class AppComponent {
       this.rolandoDados = false; // Desativa a animação após a rolagem
     }, 1000); // Duração da animação em milissegundos
   }
+
+  // Caso você queira mudar o background ao rolar os dados ou em algum outro momento:
+  
 }
