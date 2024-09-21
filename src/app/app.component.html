@@ -1,33 +1,38 @@
-<div class="paginaContainer">
-  <h1 class="titulo">{{ titulo }}</h1>
-  <h1 class="titulo">Bandeira do Elefante e da Arara</h1>
-
-  <div class="dadosContainer">
-    <app-dado [valor]="resultadoDado1" [rolando]="rolandoDados"></app-dado>
-    <app-dado [valor]="resultadoDado2" [rolando]="rolandoDados"></app-dado>
-    <app-dado [valor]="resultadoDado3" [rolando]="rolandoDados"></app-dado>
+<div class="full-background" [style.backgroundImage]="getAleatorioBackgroundImage()">
+  <div class="paginaContainer">
+    <h1 class="titulo">{{ titulo }}</h1>
+    <h1 class="titulo">Bandeira do Elefante e da Arara</h1>
+  
+    <div class="dadosContainer">
+      <app-dado [valor]="resultadoDado1" [rolando]="rolandoDados"></app-dado>
+      <app-dado [valor]="resultadoDado2" [rolando]="rolandoDados"></app-dado>
+      <app-dado [valor]="resultadoDado3" [rolando]="rolandoDados"></app-dado>
+    </div>
+  
+    <form>
+      <div class="modContainer">
+        <p class="label">Modificadores:</p>
+        <input type="radio" name="Mod" id="Mod3" [(ngModel)]="modificador" value="3">
+        <label for="Mod3">+3</label>
+        <input type="radio" name="Mod" id="Mod6" [(ngModel)]="modificador" value="6">
+        <label for="Mod6">+6</label>
+        <input type="radio" name="Mod" id="Mod9" [(ngModel)]="modificador" value="9">
+        <label for="Mod9">+9</label>
+      </div>
+  
+      <div class="difContainer">
+        <p class="label">Dificuldade:</p>
+        <input type="number" name="Dif" id="difficulty" [(ngModel)]="dificuldade">
+      </div>
+  
+      <button type="button" class="botaoRodar" (click)="onRoll()">Rolar Dados</button>
+    </form>
+  
+    <div class="resultadoContainer">
+      <h2 class="resultado">{{ resultado }}</h2>
+    </div>
   </div>
 
-  <form>
-    <div class="modContainer">
-      <p class="label">Modificadores:</p>
-      <input type="radio" name="Mod" id="Mod3" [(ngModel)]="modificador" value="3">
-      <label for="Mod3">+3</label>
-      <input type="radio" name="Mod" id="Mod6" [(ngModel)]="modificador" value="6">
-      <label for="Mod6">+6</label>
-      <input type="radio" name="Mod" id="Mod9" [(ngModel)]="modificador" value="9">
-      <label for="Mod9">+9</label>
-    </div>
-
-    <div class="difContainer">
-      <p class="label">Dificuldade:</p>
-      <input type="number" name="Dif" id="difficulty" [(ngModel)]="dificuldade">
-    </div>
-
-    <button type="button" class="botaoRodar" (click)="onRoll()">Rolar Dados</button>
-  </form>
-
-  <div class="resultadoContainer">
-    <h2 class="resultado">{{ resultado }}</h2>
-  </div>
 </div>
+
+

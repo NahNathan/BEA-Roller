@@ -16,9 +16,15 @@ export class AppComponent {
   resultadoDado1 = 1;
   resultadoDado2 = 1;
   resultadoDado3 = 1;
-
-  // Controla o estado de rolagem dos dados
   rolandoDados = false;
+
+  // Array com os nomes dos arquivos de imagem
+  private backgroundImageUrls = ['BG1.png', 'BG2.png', 'BG3.png', 'BG4.png', 'BG5.png', 'BG6.png'];
+  
+  // Função para obter a URL da imagem aleatória
+  getAleatorioBackgroundImage(): string {
+    return `url(${this.backgroundImageUrls[Math.floor(Math.random() * this.backgroundImageUrls.length)]})`;
+  }
 
   constructor(private roladaService: RoladaService) {}
 
