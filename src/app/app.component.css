@@ -125,7 +125,7 @@ input[type="radio"]:checked {
 	background-position: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 685px) {
     .paginaContainer {
         padding: 15px;
         height: 70dvh;

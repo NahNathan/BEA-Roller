@@ -24,6 +24,9 @@ export class AppComponent {
     'assets/images/BG2.png', 
     'assets/images/BG3.png', 
     'assets/images/BG4.png',
+    'assets/images/BG5.png',
+    'assets/images/BG6.png',
+    'assets/images/BG7.png',
   ];
 
   // Armazenar a URL da imagem de background aleatória
