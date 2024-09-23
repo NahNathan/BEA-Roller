@@ -27,6 +27,12 @@
     margin-bottom: 15px;
 }
 
+.modContainer label{
+    margin-right: 30px;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
 .difContainer input {
     height: 30px;
     width: 100px;
@@ -67,7 +73,7 @@ input[type="number"] {
 }
 
 .botaoRodar:hover {
-    background-color: darkslateblue;
+    background-color: green;
     transform: scale(1.05);
 }
 
@@ -98,19 +104,52 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: darkgreen;
+    background-color: green;
+}
+
+.radio-container {
+	display: flex;
+	align-items: center;
+}
+
+.radio-container label {
+	margin-right: 10px;
 }
 
 /* Estilos para o texto ao lado do botão */
-label {
-    margin-left: 10px;
-    font-weight: normal;
-}
-
 .full-background {
     height: 100dvh;
     width: 100dvw;
 	position: fixed;
 	background-size: cover;
 	background-position: center;
+}
+
+@media (max-width: 480px) {
+    .paginaContainer {
+        padding: 15px;
+        height: 70dvh;
+        width: 70dvw;
+      }
+
+      .paginaContainer h1 {
+        font-size: 20px;
+      }
+
+  .label {
+    font-size: 12px;
+  }
+
+  input[type="number"] {
+    width: 50px;
+  }
+
+  .botaoRodar {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .resultado {
+    font-size: 18px;
+  }
 }
