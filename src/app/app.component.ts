@@ -7,7 +7,8 @@ import { RoladaService } from '../app/services/rolada.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titulo = 'Rolador de Dados';
+  titulo1 = 'Rolador de Dados';
+  titulo2 = 'A Bandeira do Elefante e da Arara';
   modificador = 0;
   dificuldade?: number;
   resultado = '';
