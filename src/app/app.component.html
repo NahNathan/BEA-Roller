@@ -13,7 +13,7 @@
       <div class="modContainer ">
         <p class="label">Modificadores:</p>
         <input type="radio" name="Mod" id="Mod0" [(ngModel)]="modificador" value="0">
-        <label for="Mod3">+0</label>
+        <label for="Mod0">+0</label>
         <input type="radio" name="Mod" id="Mod3" [(ngModel)]="modificador" value="3">
         <label for="Mod3">+3</label>
         <input type="radio" name="Mod" id="Mod6" [(ngModel)]="modificador" value="6">
@@ -25,6 +25,12 @@
       <div class="difContainer">
         <p class="label">Dificuldade:</p>
         <input type="number" name="Dif" id="difficulty" [(ngModel)]="dificuldade">
+        <div class="tooltip-container">
+          <span class="tooltip-icon">[?]</span>
+          <div class="tooltip-image">
+            <img src="assets/images/Tabela.png" alt="Tabela de Dificuldades">
+          </div>
+        </div>      
       </div>
   
       <button type="button" class="botaoRodar" (click)="onRoll()">Rolar Dados</button>
