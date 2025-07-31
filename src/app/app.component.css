@@ -177,6 +177,15 @@ input[type="radio"]:checked {
 
 /* Media Query para Mobile Portrait */
 @media (max-width: 685px) {
+    .tooltip-image{
+        bottom: 100px;
+        right: 40px;
+    }
+
+    .tooltip-image img{
+        max-width: 30vw;
+    }
+
     .paginaContainer {
         padding: 15px;
         min-height: 70vh;
