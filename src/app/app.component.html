@@ -2,26 +2,36 @@
   <div class="paginaContainer">
     <h1 class="titulo">{{ titulo1 }}</h1>
     <h1 class="titulo">{{ titulo2 }}</h1>
-  
+
     <div class="dadosContainer">
       <app-dado [valor]="resultadoDado1" [rolando]="rolandoDados"></app-dado>
       <app-dado [valor]="resultadoDado2" [rolando]="rolandoDados"></app-dado>
       <app-dado [valor]="resultadoDado3" [rolando]="rolandoDados"></app-dado>
     </div>
-  
+
     <form>
       <div class="modContainer ">
         <p class="label">Modificadores:</p>
-        <input type="radio" name="Mod" id="Mod0" [(ngModel)]="modificador" value="0">
-        <label for="Mod0">+0</label>
-        <input type="radio" name="Mod" id="Mod3" [(ngModel)]="modificador" value="3">
-        <label for="Mod3">+3</label>
-        <input type="radio" name="Mod" id="Mod6" [(ngModel)]="modificador" value="6">
-        <label for="Mod6">+6</label>
-        <input type="radio" name="Mod" id="Mod9" [(ngModel)]="modificador" value="9">
-        <label for="Mod9">+9</label>
+        <div class="radio-container">
+          <div class="radio-group">
+            <input type="radio" name="Mod" id="Mod0" [(ngModel)]="modificador" value="0">
+            <label for="Mod0">+0</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" name="Mod" id="Mod3" [(ngModel)]="modificador" value="3">
+            <label for="Mod3">+3</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" name="Mod" id="Mod6" [(ngModel)]="modificador" value="6">
+            <label for="Mod6">+6</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" name="Mod" id="Mod9" [(ngModel)]="modificador" value="9">
+            <label for="Mod9">+9</label>
+          </div>
+        </div>
       </div>
-  
+
       <div class="difContainer">
         <p class="label">Dificuldade:</p>
         <input type="number" name="Dif" id="difficulty" [(ngModel)]="dificuldade">
@@ -30,12 +40,12 @@
           <div class="tooltip-image">
             <img src="assets/images/Tabela.png" alt="Tabela de Dificuldades">
           </div>
-        </div>      
+        </div>
       </div>
-  
+
       <button type="button" class="botaoRodar" (click)="onRoll()">Rolar Dados</button>
     </form>
-  
+
     <div class="resultadoContainer">
       <h2 class="resultado">{{ resultado }}</h2>
     </div>
@@ -45,5 +55,3 @@
     <h3 class="creditos">Feito por <a href="https://github.com/NahNathan/BEA-Roller">Nathan 「RdS」☕</a></h3>
   </footer>
 </div>
-
-
